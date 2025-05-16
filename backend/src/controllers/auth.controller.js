@@ -1,3 +1,7 @@
+import passport from "passport";
+import { OAuth2Strategy as GoogleStrategy } from "passport-google-oauth";
+import { sendVerificationEmail } from "../lib/email.js";
+
 import { generateToken } from "../lib/utils.js";
 import User from "../models/user.model.js";
 import bcrypt from "bcryptjs";
@@ -106,3 +110,6 @@ export const checkAuth = (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
     }
 };
+
+
+

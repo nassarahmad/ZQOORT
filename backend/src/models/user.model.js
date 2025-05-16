@@ -20,6 +20,15 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
+    roles: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Role"
+    }],
+    isVerified: {
+      type: Boolean,
+      default: false
+    },
+    verificationToken: String
   },
   { timestamps: true }
 );

@@ -18,9 +18,17 @@ const messageSchema = new mongoose.Schema(
     image: {
         type: String,
     },
-},
-{ timestamps: true }
-);
+    groupId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Group"
+      },
+      isGroupMessage: {
+        type: Boolean,
+        default: false
+      }
+    },
+    { timestamps: true }
+  );
 
 const Message = mongoose.model("Message", messageSchema);
 
