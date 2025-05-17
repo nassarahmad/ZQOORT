@@ -1,13 +1,6 @@
 
 import groupRoutes from "./routes/group.routes.js";
 
-
-
-
- /* 
- // Add this early in your main application file (app.js/server.js)
-import EventEmitter from 'events';
-EventEmitter.defaultMaxListeners = 15; // Increase from default 10 */
 import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
@@ -47,7 +40,7 @@ server.listen(5001,()=>{
     connectDB();
     
 })
- 
+
 
 
 
